@@ -20,6 +20,7 @@ do
 delaytime=$(( $RANDOM % 9 ))
 countrycaptcha_hientai=$(awk " NR == $dong " $ten_file_chua_list)
 (sleep $delaytime; curl -sSX POST "https://api.cloudflare.com/client/v4/zones/$zone/firewall/access_rules/rules" \
+#(sleep $delaytime; curl -sSX POST "https://api.cloudflare.com/client/v4/user/firewall/access_rules/rules" \
 -H "X-Auth-Email: $email" \
 -H "X-Auth-Key: $apikey" \
 -H "Content-Type: application/json" \
